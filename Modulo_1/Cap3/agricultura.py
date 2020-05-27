@@ -12,24 +12,24 @@ import numpy as np  #utilizada para tratar vetores e matrizes
 import tensorflow as tf
 import keras  #utilizada para criar os modelos de deep learning
 #from keras import backend as k #utiliza
-from tensorflow.keras.models import Sequential #utilizada para criar o modelo sequencial
-from tensorflow.keras.layers import Activation #utilizada para obter a funcao de ativação
-from tensorflow.keras.layers import Dense,Flatten,Conv2D #utilizada para importar as camadas Dense e Flatten
-from tensorflow.keras.optimizers import Adam # utilizada para importar o otimizador do tipo Adam
-from tensorflow.keras.metrics import categorical_crossentropy #utilizada para avaliar o modelo
-from tensorflow.keras.preprocessing.image import ImageDataGenerator #utilizada no pre-processamento das imagens
-from tensorflow.keras.layers import BatchNormalization #utilizada para normalizar as "bateladas" no processo de treinamento
-from tensorflow.keras.layers import * #importa todos os tipos de camadas
+from keras.models import Sequential #utilizada para criar o modelo sequencial
+from keras.layers import Activation #utilizada para obter a funcao de ativação
+from keras.layers import Dense,Flatten,Conv2D #utilizada para importar as camadas Dense e Flatten
+from keras.optimizers import Adam # utilizada para importar o otimizador do tipo Adam
+from keras.metrics import categorical_crossentropy #utilizada para avaliar o modelo
+from keras.preprocessing.image import ImageDataGenerator #utilizada no pre-processamento das imagens
+from keras.layers import BatchNormalization #utilizada para normalizar as "bateladas" no processo de treinamento
+from keras.layers import * #importa todos os tipos de camadas
 from matplotlib import pyplot as plt #utilizada para realizar o plot dos gráficos
 from sklearn.metrics import confusion_matrix #utilizada para criar a matriz de confusão
 import itertools #utilizada para criar os iterators (para os loops)
 import matplotlib.image as mpimg  #utilizada para realizar o plot das imagens
-from mlxtend.plotting import plot_confusion_matrix  #utilizar para plotar a matriz de confusão 
+# from mlxtend.plotting import plot_confusion_matrix  #utilizar para plotar a matriz de confusão 
 
 #caminhos para cada um dos conjuntos de imagens a serem utilizadas
-caminho_treinamento='BD_treinamento'  #dividido em 2 pastas (sadias e contaminadas) - 60/60
-caminho_validacao='BD_validacao' #dividido em 2 pastas (sadias e contaminadas) - 20/20
-caminho_teste='BD_teste' #dividido em 2 pastas (sadias e contaminadas) - 25/25
+caminho_treinamento = "/home/igorbaio/Documentos/BootcampAnalistaMachineLearning/Cap3/BD_treinamento" #dividido em 2 pastas (sadias e contaminadas) - 60/60
+caminho_validacao = "/home/igorbaio/Documentos/BootcampAnalistaMachineLearning/Cap3/BD_validacao" #dividido em 2 pastas (sadias e contaminadas) - 20/20
+caminho_teste = "/home/igorbaio/Documentos/BootcampAnalistaMachineLearning/Cap3/BD_teste" #dividido em 2 pastas (sadias e contaminadas) - 25/25
 
 #---------------------------------------------------
 # Conhecendo e Preparando o BD
@@ -125,11 +125,11 @@ print(previsao)
 #criando a matriz de confusão para comparar os resultados
 matriz_confusao=confusion_matrix(teste_labels,previsao[:,0])
 nomes_das_classes=['contaminadas','sadias']
-fig, ax = plot_confusion_matrix(conf_mat=matriz_confusao,
-                                colorbar=True,
-                                show_absolute=True,
-                                show_normed=True,
-                                class_names=nomes_das_classes)
+# fig, ax = plot_confusion_matrix(conf_mat=matriz_confusao,
+#                                 colorbar=True,
+#                                 show_absolute=True,
+#                                 show_normed=True,
+#                                 class_names=nomes_das_classes)
 plt.show()
 
 #-----------------------------------------------------------------------------
@@ -204,11 +204,11 @@ print(previsao)
 matriz_confusao=confusion_matrix(teste_labels,np.round(previsao[:,0])) # a diferença é que a rede gera valores float, então devemos converter
 #em valores inteiros (0,1)
 nomes_das_classes=['contaminadas','sadias']
-fig, ax = plot_confusion_matrix(conf_mat=matriz_confusao,
-                                colorbar=True,
-                                show_absolute=True,
-                                show_normed=True,
-                                class_names=nomes_das_classes)
+# fig, ax = plot_confusion_matrix(conf_mat=matriz_confusao,
+#                                 colorbar=True,
+#                                 show_absolute=True,
+#                                 show_normed=True,
+#                                 class_names=nomes_das_classes)
 plt.show()
 
 
