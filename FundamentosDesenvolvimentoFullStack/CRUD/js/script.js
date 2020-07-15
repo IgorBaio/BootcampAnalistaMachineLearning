@@ -27,7 +27,7 @@ function preventFormSubmit(){
 function activateInput(){
 
    function insertName(newName){
-      globalNames = [...globalNames,newName]
+      globalNames.push(newName);
       clearInput();
    }
 
