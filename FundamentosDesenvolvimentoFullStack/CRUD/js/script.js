@@ -1,6 +1,6 @@
 window.addEventListener("load", start);
 
-var globalNames = ['a','b','c','d','e'];
+var globalNames = ['Igor','Afonso','Paulo','Antonio','Jose'];
 var inputName = null;
 var isEditing = false;
 var currentIndex = null;
@@ -27,16 +27,12 @@ function preventFormSubmit(){
 function activateInput(){
 
    function insertName(newName){
-      var typedName = newName;
-      console.log(globalNames.length)
-      console.log(globalNames[globalNames.length-1])
-      globalNames.push(newName)
+      globalNames = [...globalNames,newName]
       clearInput();
-      console.log(globalNames)
    }
 
    function updateName(newName){
-      globalNames[index] = newName;
+      globalNames[currentIndex] = newName;
 
    }
 
@@ -53,7 +49,6 @@ function activateInput(){
          if(isEditing){
             updateName(event.target.value);
          }else{
-            console.log('inse')
             insertName(event.target.value)
          }
          isEditing = false;
@@ -68,11 +63,9 @@ function activateInput(){
 function render(){
    function createDeleteButton(index){
       function deleteName(){
-         console.log(index)
          globalNames.splice(index,1);
          render();
       }
-      console.log("aq")
       var button = document.createElement("button");
       button.classList.add("deleteButton");
       button.textContent = "X";
