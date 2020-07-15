@@ -1,0 +1,35 @@
+.directTrip{
+   color: white;
+   font-weight: bold;
+   background-color: green;
+   margin-right: 10px;
+   padding: 5px;
+}
+
+.travelPaused{
+   color: white;
+   font-weight: bold;
+   background-color: darkred;
+   margin-right: 10px;
+   padding: 5px;
+}
+
+.travelAlert{
+   color: black;
+   font-weight: bold;
+   background-color: goldenrod;
+   margin-right: 10px;
+   padding: 5px;
+}
+
+body{
+   text-align: center;
+}
+
+#estimar{
+   border: none;
+   padding: 10px;
+   background-color: #069;
+   color: white;
+   font-weight: bold;
+}
