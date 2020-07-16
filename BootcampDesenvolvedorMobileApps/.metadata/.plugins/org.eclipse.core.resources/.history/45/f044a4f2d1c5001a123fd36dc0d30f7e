@@ -1,0 +1,8 @@
+public class MyClass {
+    public static void main(String args[]) {
+      int x=10;
+      Integer boxed = x;
+      
+      System.out.println("Sum of x+y = " + z);
+    }
+}

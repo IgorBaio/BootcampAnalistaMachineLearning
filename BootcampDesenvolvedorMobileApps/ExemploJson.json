@@ -1,0 +1,46 @@
+{
+   "id":1,
+   "nome": "Igor Baio",
+   "nascimento": "1999-12-08",
+   "notasFiscais": [
+      {
+         "id":1313,
+         "dataCompra": "2020-05-20",
+         "entregue": false,
+         "itens": [
+            {
+               "id":66,
+               "valorUnitario": 15.10,
+               "quantidade": 4
+            },
+            {
+               "id":548,
+               "valorUnitario": 24,
+               "quantidade": 2
+            },
+            {
+               "id":642,
+               "valorUnitario": 40,
+               "quantidade": 1
+            }
+         ]
+      },
+      {
+         "id":1023,
+         "dataCompra": "2020-05-20",
+         "entregue": false,
+         "itens": [
+            {
+               "id":84,
+               "valorUnitario": 5,
+               "quantidade": 8
+            },
+            {
+               "id":58,
+               "valorUnitario": 22,
+               "quantidade": 3
+            }
+         ]
+      }
+   ]
+}

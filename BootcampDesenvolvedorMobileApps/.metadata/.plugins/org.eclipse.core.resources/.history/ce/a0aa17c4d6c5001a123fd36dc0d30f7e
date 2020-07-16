@@ -1,0 +1,59 @@
+import java.util.ArrayList;
+
+class Todo{
+	private Integer userId;
+	private Integer id;
+	private String title;
+	private Boolean completed;
+	
+	public Integer getUserId() {
+		return userId;
+	}
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public Boolean getCompleted() {
+		return completed;
+	}
+	public void setCompleted(Boolean completed) {
+		this.completed = completed;
+	}
+	
+}
+
+public class MyClass {
+    public static void main(String args[]) {
+//      int x=10;
+//      Double valor = 5.0;// ou poderia ser 5d
+//      double outroValor = 5;
+//      
+//      Float valorFloat = 5f;
+//      
+//      System.out.println(Integer.MIN_VALUE);
+//      System.out.println(Integer.MAX_VALUE);
+//      System.out.println(Double.MIN_VALUE);
+//      System.out.println(Double.MAX_VALUE);
+//      System.out.println(Float.MIN_VALUE);
+//      System.out.println(Float.MAX_VALUE);
+    	
+    	ArrayList todos = new ArrayList()
+    	
+    	Todo todo = new Todo();
+    	todo.setUserId(1);
+    	System.out.println(todo.getUserId());
+    	
+    	
+    }
+}

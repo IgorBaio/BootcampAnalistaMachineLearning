@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+C:\Users\Igori\Documents\Projects\Bootcamp desenvolvedor mobile\.metadata\.plugins\org.eclipse.jdt.core
+2232000389.index
+399350850.index
+3164639128.index
+4287600167.index
+3581163120.index
