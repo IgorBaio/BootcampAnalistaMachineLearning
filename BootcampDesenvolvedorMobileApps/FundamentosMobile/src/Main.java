@@ -56,7 +56,7 @@ public class Main {
 	public static void main(String[] args) {
 		Random gerador = new Random();
 		JSONArray mJsonArray = new JSONArray();
-		ArrayList<Correntista> correntistas = new ArrayList();
+		ArrayList<Correntista> correntistas = new ArrayList<Correntista>();
 		for(int i = 0; i < 3; i++){
 			Correntista correntista = new Correntista();
 			correntista.setAgencia("000-"+(i+1));
@@ -89,7 +89,9 @@ public class Main {
 			myObject.put("saldo", c.getSaldo());
 			mJsonArray.put(myObject);
 		}
-
+		Double saldoBanco = correntistas.stream().map(correntista->correntista.getSaldo()).reduce(0.0,(acc,curr)->acc+curr);
+		System.out.println("\nO banco possui um saldo total de R$"+saldoBanco);
+		
 		System.out.println("\n");
 		System.out.println(mJsonArray.toString());
 		System.out.println("\n");
