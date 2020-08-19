@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Resultado">
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="354dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="138dp"
+        android:text="Resultado"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/editTextSalarioBruto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewResultadoSalarioBruto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="16dp"
+        android:text="Salário Bruto"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewINSS"
+        app:layout_constraintStart_toStartOf="@+id/textViewINSS" />
+
+    <TextView
+        android:id="@+id/textViewResultadoOutrosDescontos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="68dp"
+        android:text="Outros Descontos"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textViewResultadoOutrosDescontosValor"
+        app:layout_constraintTop_toTopOf="@+id/textViewResultadoOutrosDescontosValor" />
+
+    <TextView
+        android:id="@+id/textViewINSS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginBottom="19dp"
+        android:text="INSS"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewIRRF"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewIRRF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="IRRF"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewResultadoOutrosDescontos"
+        app:layout_constraintStart_toStartOf="@+id/textViewResultadoOutrosDescontos" />
+
+    <TextView
+        android:id="@+id/textViewResultadoSalarioBrutoValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="149dp"
+        android:text="0,00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewResultadoSalarioBruto"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultado" />
+
+    <TextView
+        android:id="@+id/textViewINSSValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="0,00"
+        android:textColor="#BCCF0D0D"
+        app:layout_constraintStart_toStartOf="@+id/textViewResultadoSalarioBrutoValor"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultadoSalarioBrutoValor" />
+
+    <TextView
+        android:id="@+id/textViewIRRFValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="20dp"
+        android:text="0,00"
+        android:textColor="#BCCF0D0D"
+        app:layout_constraintStart_toStartOf="@+id/textViewINSSValor"
+        app:layout_constraintTop_toBottomOf="@+id/textViewINSSValor" />
+
+    <TextView
+        android:id="@+id/textViewResultadoOutrosDescontosValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="1dp"
+        android:text="0,00"
+        android:textColor="#BCCF0D0D"
+        app:layout_constraintEnd_toEndOf="@+id/textViewIRRFValor"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIRRFValor" />
+
+    <TextView
+        android:id="@+id/textViewSalarioLiquido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="85dp"
+        android:text="Salário Líquido"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultadoOutrosDescontos" />
+
+    <TextView
+        android:id="@+id/textViewDescontos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="53dp"
+        android:text="Descontos"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSalarioLiquido" />
+
+    <TextView
+        android:id="@+id/textViewSalarioLiquidoValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:text="0,00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDescontosValor"
+        app:layout_constraintStart_toStartOf="@+id/textViewDescontosValor" />
+
+    <TextView
+        android:id="@+id/textViewDescontosValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="94dp"
+        android:text="0,00%"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDescontos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewDescontos" />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="532dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
